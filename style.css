@@ -5,7 +5,14 @@
           box-sizing: border-box;
 }
 
-header {
+.hero-section {
+  height: 100vh;
+  background-image: url("/images/hero-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-section header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,22 +21,101 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5px;
+  color: white;
 }
 
-header .logo {
+.hero-section header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.2vw;
+}
+
+.hero-section header .logo img {
+  margin-right: 1vw;
 }
 
 ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-a {
+ul li {
+  margin: 1vw;
+  font-size: 1.2vw;
+}
+
+ul li a {
   text-decoration: none;
+  color: white;
+}
+
+.hero {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3vw;
+  text-transform: uppercase;
+  padding: 50px;
+  letter-spacing: 10px;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 20px;
+  width: 75%;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.hero button {
+  border: 2px solid white;
+  padding: 20px 50px;
+  color: white;
+  background-color: #ff9d00;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-size: 32px;
+  font-weight: bold;
+  width: 40%;
+  margin: 50px auto 0px auto;
+}
+
+.hero button:hover {
+  background-color: #ff5e00;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
