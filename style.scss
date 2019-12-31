@@ -1,0 +1,22 @@
+$primaryColor : rgb(150, 101, 45);
+
+@import './reset';
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
