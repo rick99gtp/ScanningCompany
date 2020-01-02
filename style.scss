@@ -9,9 +9,8 @@
 
 @mixin btnStyle {
     color: white;
-    background-color: rgb(255, 157, 0);
+    background-color: #FC5835;
     cursor: pointer;
-    border-radius: 50px;
     transition: all .2s ease-in-out;
     border: 3px solid #fff;
 
@@ -23,7 +22,7 @@
 
 .hero-section {
     height: 100vh;
-    background-image: url('/images/hero-3.jpg');
+    background-image: url('/images/hero-image.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -33,6 +32,7 @@
         align-items: center;
         padding: 5px;
         color: $secondaryColor;
+        background-color: rgba(31, 45, 54, 0.664);
     
         .logo {
             display: flex;
@@ -65,79 +65,91 @@
     font-family: $fontFamily;
     position: absolute;
     width: 50%;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
     h1 {
-        color: $secondaryColor;
+        color: white;
         font-size: 3vw;
         text-transform: uppercase;
-        padding: 50px;
+        // padding: 50px;
         letter-spacing: 10px;
+        // font-family: 'Montserrat Alternates', sans-serif;
+        // font-family: 'Arima Madurai', cursive;
+        // font-family: 'Laila', serif;
+        font-family: 'Poiret One', cursive;
+        margin-bottom: 30px;
     }
 
     h2 {
         color: $secondaryColor;
-        font-size: 20px;
-        width: 75%;
-        margin: 0 auto;
-        line-height: 2;
+        font-size: 2vw;
+        line-height: 1.35;
+        // font-family: 'Dosis', sans-serif;
+        font-family: 'Poiret One', cursive;
     }
 
     button {
         @include btnStyle();
         padding: 10px 75px;
-        // color: white;
-        // background-color: rgb(255, 157, 0);
-        // cursor: pointer;
         border-radius: 50px;
-        // transition: all .2s ease-in-out;
         font-size: 32px;
         font-weight: bold;
         margin: 50px auto 0px auto;
-        // border: 3px solid #fff;
-
-        // &:hover {
-        //     background-color: rgb(255, 94, 0);
-        //     color: black;
-        // }
+        text-transform: uppercase;
+        outline: none;
     }
 }
 
 .note {
-    @include flexCenter();
-    p {
-        width: 50%;
-        text-align: center;
-        padding: 50px;
-        line-height: 3;
+    background-color: #f8f8fb;
+    
+    .note-inner {
+        @include flexCenter();
+        p {
+            width: 50%;
+            text-align: center;
+            padding: 50px;
+            line-height: 3;
+        }
     }
 }
 
 .features {
-    background-color: lightgray;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .feature-item {
-        display: flex;
-        padding: 20px;
+    .features-inner {
+        width: 75%;
 
-        .left {
-            width: 50%;
-
-            h2 {
-                text-align: center;
-            }
-
-            p {
+        .feature-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+    
+            .left {
                 width: 50%;
-                margin: 0 auto;
-                line-height: 2;
+    
+                h2 {
+                    text-align: center;
+                }
+    
+                p {
+                    width: 50%;
+                    margin: 0 auto;
+                    line-height: 2;
+                }
             }
         }
     }
@@ -145,47 +157,134 @@
 
 .right {
     width: 50%;
-    background-color: gray;
+    display: flex;
+    justify-content: flex-start;
 
-    .inner-image {
-        background: url('/images/')
+    img {
+        
     }
 }
 
-.pricing {
-    padding: 20px;
-    background-color: lightgrey;
-    @include flexCenter();
+.price-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 1rem;
+    padding: 2rem;
+    width: 100%;
 
-    .pricing-container {
-        background-color: #fff;
-        width: 85%;
-        padding: 40px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    .price-column {
+        background-color: white;
+        box-shadow: 0 7px 30px rgba(52,31,97,0.1);
+        padding: 2rem;
+        flex-grow: 1;
+        max-width: 375px;
+        flex-basis: 0;
+        border-radius: 8px;
+        &.popular {
+            background-color: #b512bb;
+            box-shadow: 0 7px 30px rgba(52,13,135, 0.3);
+            color: white;
+            margin-top: -1.5rem;
+            padding-top: 3.5rem;
+            margin-bottom: -1.5rem;
+            padding-bottom: 3.5rem;
+            position: relative;
 
-        .pricing-item {
-            text-align: center;
-            flex: 1;
-
-            .pricing-item-name {
-                font-size: 32px;
-                border: 2px solid lightgray;
+            .divider {
+                background-color: rgba(white, .1);
             }
 
-            .pricing-item-list-container {
-                border: 2px solid lightgray;
-                padding: 10px;
+            .cta {
+                background-color: white;
+                color: rgba(52,13,135,0.3);
+            }
+        }
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
 
-                ul {
-                    list-style-position: inside;
+        .price-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+
+            .price {
+                display: flex;
+                font-size: 5rem;
+
+                .dollar-sign {
+                    font-size: 3rem;
+                    margin-top: .5rem;
+                    margin-right: .25rem;
                 }
             }
 
-            .pricing-item-button {
-                @include btnStyle();
+            .plan-name {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem;
+            font-size: 1.25rem;
+            &.inactive {
+                color: #999;
+                text-decoration: line-through;
+            }
+
+            img {
+                height: 1.1em;
+                width: 1.1em;
+                margin-right: .5rem;
             }
         }
     }
+
+    .cta {
+        border: none;
+        background-color: rgba(52,13,135, 0.3);
+        color: white;
+        width: 100%;
+        padding: .75rem 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-top: 3rem;
+        transition: .1s ease-in-out;
+
+        &:hover, &:focus {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.most-popular {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    right: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
 }
