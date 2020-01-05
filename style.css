@@ -7,23 +7,34 @@
 
 .hero-section {
   height: 100vh;
-  background-image: url("/images/hero-image.jpg");
+  background-image: url("/images/hero-4.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: white;
-  background-color: rgba(31, 45, 54, 0.664);
+}
+
+.hero-section header .hamburger-container {
+  height: 100%;
+  width: 40px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.hero-section header .hamburger-container .line {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  margin: 8px;
 }
 
 .hero-section header .logo {
@@ -34,6 +45,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2vw;
+  margin-left: 10px;
 }
 
 .hero-section header .logo img {
@@ -63,11 +75,21 @@
   color: white;
 }
 
+.hero-section .hero-title h1 {
+  position: absolute;
+  top: 120px;
+  left: 400px;
+  width: 60%;
+  text-align: center;
+  color: white;
+  font-size: 4vw;
+}
+
 .hero {
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  width: 50%;
-  top: 55%;
+  width: 100%;
+  top: 70%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -83,25 +105,23 @@
       justify-content: space-around;
 }
 
-.hero h1 {
-  color: white;
-  font-size: 3vw;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  font-family: 'Poiret One', cursive;
-  margin-bottom: 30px;
+.hero .highlight {
+  color: black;
+  background-color: rgba(72, 255, 0, 0.5);
+  padding: 5px;
 }
 
-.hero h2 {
+.hero p {
   color: white;
   font-size: 2vw;
-  line-height: 1.35;
-  font-family: 'Poiret One', cursive;
+  text-transform: uppercase;
+  margin: 5px;
+  font-weight: bold;
 }
 
 .hero button {
   color: white;
-  background-color: #FC5835;
+  background-color: rgba(0, 0, 0, 0.15);
   cursor: pointer;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -116,11 +136,12 @@
 }
 
 .hero button:hover {
-  background-color: #bd3111;
+  background-color: white;
+  color: black;
 }
 
 .note {
-  background-color: #e9e9e9;
+  background-color: #faffbb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,40 +154,27 @@
 }
 
 .note .note-inner {
+  text-align: center;
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 30px;
   font-size: 20px;
 }
 
-.note .note-inner button {
-  padding: 15px 50px;
-  background-color: #FC5835;
-  border: 0;
-  outline: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+.note .note-inner p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25vw;
 }
 
-.note .note-inner button:hover {
-  background-color: #bd3111;
+.note .note-inner h2 {
+  margin: 2vw;
+  font-size: 2vw;
 }
 
 .about {
   height: 300px;
   color: white;
-  background: url("./images/about.jpg");
+  background: url("./images/purple-flower.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -178,17 +186,20 @@
 
 .about .about-inner {
   text-align: center;
+  width: 40%;
 }
 
 .about .about-inner i {
   padding-top: 60px;
-  color: #FC5835;
+  color: #daa128;
+  font-size: 2vw;
 }
 
 .about .about-inner h2 {
   padding: 50px;
-  color: #FC5835;
+  color: #daa128;
   text-transform: uppercase;
+  font-size: 1.5vw;
 }
 
 .about .about-inner .story-link {
@@ -196,7 +207,7 @@
   color: #bfbfbf;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1vw;
   -webkit-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
 }
@@ -212,10 +223,13 @@
 }
 
 .about .about-inner .about-hidden .about-hidden-inner p {
-  width: 35%;
+  width: 65%;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 1vw;
   margin-bottom: 35px;
+  text-align: justify;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 
 .features {
