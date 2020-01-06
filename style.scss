@@ -9,7 +9,7 @@
 
 @mixin btnStyle {
     color: white;
-    background-color: rgb(255, 47, 0);
+    background-color: $orangeBg;
     // background-color: rgba(0,0,0,.15);
     cursor: pointer;
     transition: all .2s ease-in-out;
@@ -82,12 +82,12 @@
             width: 70%;
             text-align: center;
             color: white;
-            font-size: 3.25vw;
+            font-size: 3.5vw;
             font-weight: 500;
             font-family: 'titan one', cursive;
             text-transform: uppercase;
             letter-spacing: 2px;
-
+            line-height: 1.5;
         }
     }
 }
@@ -106,9 +106,7 @@
     font-weight: 500;
 
     .highlight {
-        color: #7C4388;
-        padding: 5px;
-        text-decoration: underline;
+        // color: #9e4f95;
     }
 
     p {
@@ -131,7 +129,7 @@
 }
 
 .note {
-    background-color: #faffbb;
+    background-color: #fffdd0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +143,10 @@
 
         p {
             font-size: 1.25vw;
+        }
+
+        p:nth-child(4) {
+            line-height: 3;
         }
 
         h2 {
@@ -172,7 +174,7 @@
 .about {
     height: 300px;
     color: white;
-    background: url('./images/purple-flower.jpg');
+    background: url('./images/about.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -183,47 +185,60 @@
 
     .about-inner {
         text-align: center;
-        width: 40%;
 
-        i {
-            padding-top: 60px;
-            color: rgb(218, 161, 40);
-            font-size: 2vw;
-        }
-
-        h2 {
-            padding: 50px;
-            color: rgb(218, 161, 40);
-            text-transform: uppercase;
-            font-size: 1.5vw;
-        }
-
-        .story-link {
-            font-family: $fontFamily;
-            color: rgb(191,191,191);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1vw;
-            transition: color .5s ease-in-out;
-            &:hover {
+        .inner-upper {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            h2 {
                 color: white;
+                text-transform: uppercase;
+                font-size: 1.5vw;
+                font-family: $fontFamily;
+                margin-bottom: 20px;
+            }
+    
+            .story-link {
+                font-family: $fontFamily;
+                color: rgb(191,191,191);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1vw;
+                transition: color .5s ease-in-out;
+                margin-top: 20px;
+
+                &:hover {
+                    color: white;
+                }
             }
         }
 
         .about-hidden {
-            margin-top: 60px;
             line-height: 2;
             text-align: center;
 
             .about-hidden-inner {
-                p {
-                    width: 65%;
-                    margin: 0 auto;
-                    font-size: 1vw;
-                    margin-bottom: 35px;
-                    text-align: justify;
-                    text-transform: uppercase;
-                    font-family: $fontFamily;
+                display: flex;
+
+                .hidden-inner-left {
+                    width: 50%;
+
+                    p {
+                        font-size: 1vw;
+                        margin: 0 50px 35px auto;
+                        text-align: justify;
+                        text-transform: uppercase;
+                        font-family: $fontFamily;
+                        width: 65%;
+                    }
+                }
+
+                .hidden-inner-right {
+                    width: 50%;
+                    margin-left: 50px;
                 }
             }
 
@@ -233,8 +248,8 @@
 }
 
 .features {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    // margin-top: 3rem;
+    // margin-bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,13 +257,19 @@
     .features-inner {
         width: 75%;
 
+        .feature-1 {
+            padding-top: 5vw;
+        }
+
         .feature-item {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 5rem;
-            margin-top: 5rem;
-            margin-bottom: 5rem;
+            // padding: 5rem;
+            // margin-top: 5rem;
+            // margin-bottom: 5rem;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
     
             .left {
                 width: 50%;
@@ -287,7 +308,6 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    margin: 1rem;
     padding: 2rem;
     width: 100%;
 

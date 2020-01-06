@@ -82,11 +82,12 @@
   width: 70%;
   text-align: center;
   color: white;
-  font-size: 3.25vw;
+  font-size: 3.5vw;
   font-weight: 500;
   font-family: 'titan one', cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 .hero {
@@ -108,12 +109,6 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-weight: 500;
-}
-
-.hero .highlight {
-  color: #7C4388;
-  padding: 5px;
-  text-decoration: underline;
 }
 
 .hero p {
@@ -145,7 +140,7 @@
 }
 
 .note {
-  background-color: #faffbb;
+  background-color: #fffdd0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,6 +164,10 @@
   font-size: 1.25vw;
 }
 
+.note .note-inner p:nth-child(4) {
+  line-height: 3;
+}
+
 .note .note-inner h2 {
   margin: 2vw;
   font-size: 2vw;
@@ -177,7 +176,7 @@
 .about {
   height: 300px;
   color: white;
-  background: url("./images/purple-flower.jpg");
+  background: url("./images/about.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
@@ -190,23 +189,34 @@
 
 .about .about-inner {
   text-align: center;
-  width: 40%;
 }
 
-.about .about-inner i {
-  padding-top: 60px;
-  color: #daa128;
-  font-size: 2vw;
+.about .about-inner .inner-upper {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about .about-inner h2 {
-  padding: 50px;
-  color: #daa128;
+.about .about-inner .inner-upper h2 {
+  color: white;
   text-transform: uppercase;
   font-size: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
 }
 
-.about .about-inner .story-link {
+.about .about-inner .inner-upper .story-link {
   font-family: "Montserrat", sans-serif;
   color: #bfbfbf;
   text-decoration: none;
@@ -214,31 +224,43 @@
   font-size: 1vw;
   -webkit-transition: color .5s ease-in-out;
   transition: color .5s ease-in-out;
+  margin-top: 20px;
 }
 
-.about .about-inner .story-link:hover {
+.about .about-inner .inner-upper .story-link:hover {
   color: white;
 }
 
 .about .about-inner .about-hidden {
-  margin-top: 60px;
   line-height: 2;
   text-align: center;
 }
 
-.about .about-inner .about-hidden .about-hidden-inner p {
-  width: 65%;
-  margin: 0 auto;
+.about .about-inner .about-hidden .about-hidden-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .about-inner .about-hidden .about-hidden-inner .hidden-inner-left {
+  width: 50%;
+}
+
+.about .about-inner .about-hidden .about-hidden-inner .hidden-inner-left p {
   font-size: 1vw;
-  margin-bottom: 35px;
+  margin: 0 50px 35px auto;
   text-align: justify;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+  width: 65%;
+}
+
+.about .about-inner .about-hidden .about-hidden-inner .hidden-inner-right {
+  width: 50%;
+  margin-left: 50px;
 }
 
 .features {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,6 +276,10 @@
   width: 75%;
 }
 
+.features .features-inner .feature-1 {
+  padding-top: 5vw;
+}
+
 .features .features-inner .feature-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,9 +290,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .features .features-inner .feature-item .left {
@@ -309,7 +335,6 @@
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 1rem;
   padding: 2rem;
   width: 100%;
 }
