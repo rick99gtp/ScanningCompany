@@ -76,9 +76,7 @@
 }
 
 .hero-section .hero-title h1 {
-  position: absolute;
-  top: 120px;
-  left: 400px;
+  margin: 50px auto;
   width: 70%;
   text-align: center;
   color: white;
@@ -162,15 +160,7 @@
 
 .note .note-inner p {
   font-size: 1.25vw;
-}
-
-.note .note-inner p:nth-child(4) {
-  line-height: 3;
-}
-
-.note .note-inner h2 {
-  margin: 2vw;
-  font-size: 2vw;
+  line-height: 2;
 }
 
 .about {
@@ -476,5 +466,76 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+.get-started {
+  background: url("images/photographer.jpg");
+  background-position: bottom;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.get-started .get-started-inner button {
+  color: white;
+  background-color: #ff2f00;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: 3px solid #fff;
+  font-family: 'titan one', cursive;
+  padding: 10px 75px;
+  border-radius: 50px;
+  font-size: 1.75vw;
+  margin: 50px auto 0px auto;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.get-started .get-started-inner button:hover {
+  background-color: white;
+  color: #ff2f00;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer .footer-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.footer .footer-inner .contact-info .contact-phone, .footer .footer-inner .contact-info .contact-email {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.footer .footer-inner .social i {
+  margin: 10px;
+}
+
+.footer .footer-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

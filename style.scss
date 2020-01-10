@@ -10,7 +10,6 @@
 @mixin btnStyle {
     color: white;
     background-color: $orangeBg;
-    // background-color: rgba(0,0,0,.15);
     cursor: pointer;
     transition: all .2s ease-in-out;
     border: 3px solid #fff;
@@ -76,9 +75,7 @@
 
     .hero-title {
         h1 {
-            position: absolute;
-            top: 120px;
-            left: 400px;
+            margin: 50px auto;
             width: 70%;
             text-align: center;
             color: white;
@@ -143,31 +140,8 @@
 
         p {
             font-size: 1.25vw;
+            line-height: 2;
         }
-
-        p:nth-child(4) {
-            line-height: 3;
-        }
-
-        h2 {
-            margin: 2vw;
-            font-size: 2vw;
-        }
-
-        // button {
-        //     padding: 15px 50px;
-        //     background-color: #7C4388;
-        //     border: 0;
-        //     outline: 0;
-        //     color: white;
-        //     font-weight: bold;
-        //     font-size: 18px;
-        //     cursor: pointer;
-        //     transition: all .4s ease-in-out;
-        //     &:hover {
-        //         background-color: rgb(189, 49, 17);
-        //     }
-        // }
     }
 }
 
@@ -425,4 +399,63 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.25rem;
+}
+
+.get-started {
+    background: url('images/photographer.jpg');
+    background-position: bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .get-started-inner {
+        button {
+            @include btnStyle();
+            font-family: 'titan one', cursive;
+            padding: 10px 75px;
+            border-radius: 50px;
+            font-size: 1.75vw;
+            margin: 50px auto 0px auto;
+            text-transform: uppercase;
+            outline: none;
+        }        
+    }
+}
+
+.footer {
+    position: relative;
+
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+        padding: 50px;
+
+        .contact-info {
+
+            .contact-phone, .contact-email {
+                font-size: 20px;
+                padding: 5px;
+            }
+
+        }
+
+        .social {
+            i {
+                margin: 10px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
 }
