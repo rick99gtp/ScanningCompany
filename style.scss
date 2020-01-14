@@ -582,3 +582,13 @@ header {
         }
     }
 }
+
+.input-red {
+    background-color: #ff2f00;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .input-red::placeholder {
+    color: white;
+  }

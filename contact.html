@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="contact-right">
-                    <form action="/contact.php">
+                    <form method="POST" action="contact.php">
                         <label for="user-name">Your Name: *</label>
                         <input type="text" id="user-name" name="username" placeholder="Your Name" />
                         <label for="user-phone">Phone: *</label>
@@ -56,10 +56,10 @@
                         <label for="user-email">Email: *</label>
                         <input type="text" id="user-email" name="useremail" placeholder="Your email" />
                         <label for="user-project">Project Description (# of photos, slides, negatives): *</label>
-                        <textarea type="text" id="user-proejct" name="userproject" placeholder="Description of Your Project"></textarea>
-                        <input type="checkbox" value="usb" /> I would like a USB Thumb Drive ($10 upgrade)<br>
+                        <textarea type="text" id="user-project" name="userproject" placeholder="Description of Your Project"></textarea>
+                        <input type="checkbox" value="usb" name="usb" /> I would like a USB Thumb Drive ($10 upgrade)<br>
                         <input type="submit" value="Submit" />
-                    </form action="/action_page.php">
+                    </form>
                 </div>
             </div>
 

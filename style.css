@@ -679,4 +679,26 @@ header ul li a {
   color: #ff2f00;
   cursor: pointer;
 }
+
+.input-red {
+  background-color: #ff2f00;
+  color: white;
+  font-weight: bold;
+}
+
+.input-red::-webkit-input-placeholder {
+  color: white;
+}
+
+.input-red:-ms-input-placeholder {
+  color: white;
+}
+
+.input-red::-ms-input-placeholder {
+  color: white;
+}
+
+.input-red::placeholder {
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
