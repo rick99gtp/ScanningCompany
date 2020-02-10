@@ -30,9 +30,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: white;
 }
 
@@ -41,6 +40,7 @@ header .hamburger-container {
   width: 40px;
   margin-right: 50px;
   margin-top: 20px;
+  display: none;
 }
 
 header .hamburger-container .line {
@@ -109,6 +109,10 @@ header ul li a {
   font-weight: 500;
 }
 
+.hero .highlight {
+  color: #E14300;
+}
+
 .hero p {
   color: white;
   font-size: 2.5vw;
@@ -148,13 +152,13 @@ header ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'titan one', cursive;
+  font-family: 'roboto', sans-serif;
 }
 
 .note .note-inner {
   text-align: center;
   width: 50%;
-  padding: 30px;
+  padding: 80px;
   font-size: 20px;
 }
 
@@ -166,7 +170,8 @@ header ul li a {
 .about {
   height: 300px;
   color: white;
-  background: url("./images/about.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("./images/about.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./images/about.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
@@ -208,7 +213,7 @@ header ul li a {
 
 .about .about-inner .inner-upper .story-link {
   font-family: "Montserrat", sans-serif;
-  color: #bfbfbf;
+  color: rgba(255, 47, 0, 0.8);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1vw;
@@ -218,7 +223,7 @@ header ul li a {
 }
 
 .about .about-inner .inner-upper .story-link:hover {
-  color: white;
+  color: #ff2f00;
 }
 
 .about .about-inner .about-hidden {
@@ -241,13 +246,13 @@ header ul li a {
   margin: 0 50px 35px auto;
   text-align: justify;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'roboto', sans-serif;
   width: 65%;
 }
 
 .about .about-inner .about-hidden .about-hidden-inner .hidden-inner-right {
   width: 50%;
-  margin-left: 50px;
+  margin-left: 200px;
 }
 
 .features {
@@ -290,7 +295,7 @@ header ul li a {
 }
 
 .features .features-inner .feature-item .left h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'roboto', sans-serif;
   text-align: right;
   font-size: 50px;
   text-transform: uppercase;
@@ -298,11 +303,13 @@ header ul li a {
   width: 100%;
 }
 
-.features .features-inner .feature-item .left p {
-  text-align: right;
-  width: 75%;
-  margin-left: 25%;
-  line-height: 2;
+.features .features-inner .feature-item .left ul {
+  display: inline-block;
+}
+
+.features .features-inner .feature-item .left ul li {
+  font-family: 'roboto', sans-serif;
+  font-size: 24px;
 }
 
 .right {
