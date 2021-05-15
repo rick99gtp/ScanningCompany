@@ -338,6 +338,7 @@ header ul li a {
           align-items: stretch;
   padding: 2rem;
   width: 100%;
+  background-color: #eeefff;
 }
 
 .price-comparison .price-column {
